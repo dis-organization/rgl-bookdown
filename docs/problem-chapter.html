@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Problem chapter | rgl bookdown troubleshoot</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Problem chapter | rgl bookdown troubleshoot" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Problem chapter | rgl bookdown troubleshoot" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Mike" />
+
+
+<meta name="date" content="2019-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="rgl-and-bookdown-eek.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="libs/rglwidgetClass-2/rgl.css" rel="stylesheet" />
+<script src="libs/rglwidgetClass-2/rglClass.src.js"></script>
+<script src="libs/CanvasMatrix4-2016/CanvasMatrix.src.js"></script>
+<script src="libs/rglWebGL-binding-0.100.30/rglWebGL.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="rgl-and-bookdown-eek.html"><a href="rgl-and-bookdown-eek.html"><i class="fa fa-check"></i><b>2</b> rgl and bookdown eek</a><ul>
+<li class="chapter" data-level="2.1" data-path="rgl-and-bookdown-eek.html"><a href="rgl-and-bookdown-eek.html#quads"><i class="fa fa-check"></i><b>2.1</b> Quads</a></li>
+<li class="chapter" data-level="2.2" data-path="rgl-and-bookdown-eek.html"><a href="rgl-and-bookdown-eek.html#rando"><i class="fa fa-check"></i><b>2.2</b> Rando</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="problem-chapter.html"><a href="problem-chapter.html"><i class="fa fa-check"></i><b>3</b> Problem chapter</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">rgl bookdown troubleshoot</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="problem-chapter" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Problem chapter</h1>
+<p>Why does this rgl widget not appear?</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">rgl<span class="op">::</span><span class="kw">clear3d</span>()</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2">rgl<span class="op">::</span><span class="kw">plot3d</span>(<span class="kw">matrix</span>(<span class="kw">rnorm</span>(<span class="dv">27</span>), <span class="dv">9</span>, <span class="dv">3</span>))</a>
+<a class="sourceLine" id="cb14-3" data-line-number="3"><span class="kw">rglwidget</span>()</a></code></pre></div>
+<div id="rgl13515" style="width:672px;height:480px;" class="rglWebGL html-widget"></div>
+<script type="application/json" data-for="rgl13515">{"x":{"material":{"color":"#000000","alpha":1,"lit":true,"ambient":"#000000","specular":"#FFFFFF","emission":"#000000","shininess":50,"smooth":true,"front":"filled","back":"filled","size":3,"lwd":1,"fog":false,"point_antialias":false,"line_antialias":false,"texture":null,"textype":"rgb","texmipmap":false,"texminfilter":"linear","texmagfilter":"linear","texenvmap":false,"depth_mask":true,"depth_test":"less","isTransparent":false,"polygon_offset":[0,0]},"rootSubscene":1,"objects":{"69":{"id":69,"type":"points","material":{"lit":false},"vertices":[[1.38740766048431,-2.10832142829895,-0.676198363304138],[0.0606138855218887,1.38000655174255,-1.28587365150452],[-0.580459713935852,-0.547056198120117,1.29691243171692],[-0.601182520389557,0.567891597747803,-0.339961796998978],[1.08529496192932,0.322218328714371,2.17154097557068],[0.0241916235536337,2.29637932777405,1.35452568531036],[0.368007928133011,-0.164145275950432,0.744542598724365],[0.0608430318534374,-1.48433399200439,-0.594797670841217],[-0.380984008312225,0.118673354387283,-0.455325454473495]],"colors":[[0,0,0,1]],"centers":[[1.38740766048431,-2.10832142829895,-0.676198363304138],[0.0606138855218887,1.38000655174255,-1.28587365150452],[-0.580459713935852,-0.547056198120117,1.29691243171692],[-0.601182520389557,0.567891597747803,-0.339961796998978],[1.08529496192932,0.322218328714371,2.17154097557068],[0.0241916235536337,2.29637932777405,1.35452568531036],[0.368007928133011,-0.164145275950432,0.744542598724365],[0.0608430318534374,-1.48433399200439,-0.594797670841217],[-0.380984008312225,0.118673354387283,-0.455325454473495]],"ignoreExtent":false,"flags":4096},"71":{"id":71,"type":"text","material":{"lit":false},"vertices":[[0.393112570047379,-2.85491824150085,-1.87190544605255]],"colors":[[0,0,0,1]],"texts":[["matrix(rnorm(27), 9, 3)[,1]"]],"cex":[[1]],"adj":[[0.5,0.5]],"centers":[[0.393112570047379,-2.85491824150085,-1.87190544605255]],"family":[["sans"]],"font":[[1]],"ignoreExtent":true,"flags":2064},"72":{"id":72,"type":"text","material":{"lit":false},"vertices":[[-0.938248574733734,0.0940289497375488,-1.87190544605255]],"colors":[[0,0,0,1]],"texts":[["matrix(rnorm(27), 9, 3)[,2]"]],"cex":[[1]],"adj":[[0.5,0.5]],"centers":[[-0.938248574733734,0.0940289497375488,-1.87190544605255]],"family":[["sans"]],"font":[[1]],"ignoreExtent":true,"flags":2064},"73":{"id":73,"type":"text","material":{"lit":false},"vertices":[[-0.938248574733734,-2.85491824150085,0.442833662033081]],"colors":[[0,0,0,1]],"texts":[["matrix(rnorm(27), 9, 3)[,3]"]],"cex":[[1]],"adj":[[0.5,0.5]],"centers":[[-0.938248574733734,-2.85491824150085,0.442833662033081]],"family":[["sans"]],"font":[[1]],"ignoreExtent":true,"flags":2064},"5":{"id":5,"reuse":"rgl15550"},"4":{"id":4,"reuse":"rgl15550"},"6":{"id":6,"reuse":"rgl15550"},"70":{"id":70,"type":"bboxdeco","material":{"front":"lines","back":"lines"},"vertices":[[-0.5,"NA","NA"],[0,"NA","NA"],[0.5,"NA","NA"],[1,"NA","NA"],["NA",-2,"NA"],["NA",-1,"NA"],["NA",0,"NA"],["NA",1,"NA"],["NA",2,"NA"],["NA","NA",-1],["NA","NA",-0.5],["NA","NA",0],["NA","NA",0.5],["NA","NA",1],["NA","NA",1.5],["NA","NA",2]],"colors":[[0,0,0,1]],"draw_front":true,"newIds":[81,82,83,84,85,86,87]},"1":{"id":1,"type":"subscene","par3d":{"antialias":1,"FOV":30,"ignoreExtent":false,"listeners":1,"mouseMode":{"left":"trackball","right":"zoom","middle":"fov","wheel":"pull"},"observer":[0,0,14.5406055450439],"modelMatrix":[[1.72520399093628,0,0,-0.678199410438538],[0,0.266391903162003,0.932438254356384,-0.437963664531708],[0,-0.731905698776245,0.339379787445068,-14.6220741271973],[0,0,0,1]],"projMatrix":[[3.73205089569092,0,0,0],[0,3.73205089569092,0,0],[0,0,-3.86370325088501,-52.4171981811523],[0,0,-1,0]],"skipRedraw":false,"userMatrix":[[1,0,0,0],[0,0.342020143325668,0.939692620785909,0],[0,-0.939692620785909,0.342020143325668,0],[0,0,0,1]],"userProjection":[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],"scale":[1.72520399093628,0.778877794742584,0.992280066013336],"viewport":{"x":0,"y":0,"width":1,"height":1},"zoom":1,"bbox":[-0.601182520389557,1.38740766048431,-2.10832142829895,2.29637932777405,-1.28587365150452,2.17154097557068],"windowRect":[0,0,256,256],"family":"sans","font":1,"cex":1,"useFreeType":false,"fontname":"NULL","maxClipPlanes":2147483647,"glVersion":"NaN","activeSubscene":0},"embeddings":{"viewport":"replace","projection":"replace","model":"replace","mouse":"replace"},"objects":[6,70,69,71,72,73,5,81,82,83,84,85,86,87],"subscenes":[],"flags":6736},"81":{"id":81,"type":"lines","material":{"lit":false},"vertices":[[-0.5,-2.17439198493958,-1.33773481845856],[1,-2.17439198493958,-1.33773481845856],[-0.5,-2.17439198493958,-1.33773481845856],[-0.5,-2.28781294822693,-1.42676329612732],[0,-2.17439198493958,-1.33773481845856],[0,-2.28781294822693,-1.42676329612732],[0.5,-2.17439198493958,-1.33773481845856],[0.5,-2.28781294822693,-1.42676329612732],[1,-2.17439198493958,-1.33773481845856],[1,-2.28781294822693,-1.42676329612732]],"colors":[[0,0,0,1]],"centers":[[0.25,-2.17439198493958,-1.33773481845856],[-0.5,-2.23110246658325,-1.38224911689758],[0,-2.23110246658325,-1.38224911689758],[0.5,-2.23110246658325,-1.38224911689758],[1,-2.23110246658325,-1.38224911689758]],"ignoreExtent":true,"origId":70,"flags":64},"82":{"id":82,"type":"text","material":{"lit":false},"vertices":[[-0.5,-2.51465511322021,-1.60482013225555],[0,-2.51465511322021,-1.60482013225555],[0.5,-2.51465511322021,-1.60482013225555],[1,-2.51465511322021,-1.60482013225555]],"colors":[[0,0,0,1]],"texts":[["-0.5"],["0"],["0.5"],["1"]],"cex":[[1]],"adj":[[0.5,0.5]],"centers":[[-0.5,-2.51465511322021,-1.60482013225555],[0,-2.51465511322021,-1.60482013225555],[0.5,-2.51465511322021,-1.60482013225555],[1,-2.51465511322021,-1.60482013225555]],"family":[["sans"]],"font":[[1]],"ignoreExtent":true,"origId":70,"flags":2064},"83":{"id":83,"type":"lines","material":{"lit":false},"vertices":[[-0.631011366844177,-2,-1.33773481845856],[-0.631011366844177,2,-1.33773481845856],[-0.631011366844177,-2,-1.33773481845856],[-0.682217597961426,-2,-1.42676329612732],[-0.631011366844177,-1,-1.33773481845856],[-0.682217597961426,-1,-1.42676329612732],[-0.631011366844177,0,-1.33773481845856],[-0.682217597961426,0,-1.42676329612732],[-0.631011366844177,1,-1.33773481845856],[-0.682217597961426,1,-1.42676329612732],[-0.631011366844177,2,-1.33773481845856],[-0.682217597961426,2,-1.42676329612732]],"colors":[[0,0,0,1]],"centers":[[-0.631011366844177,0,-1.33773481845856],[-0.656614482402802,-2,-1.38224911689758],[-0.656614482402802,-1,-1.38224911689758],[-0.656614482402802,0,-1.38224911689758],[-0.656614482402802,1,-1.38224911689758],[-0.656614482402802,2,-1.38224911689758]],"ignoreExtent":true,"origId":70,"flags":64},"84":{"id":84,"type":"text","material":{"lit":false},"vertices":[[-0.784629940986633,-2,-1.60482013225555],[-0.784629940986633,-1,-1.60482013225555],[-0.784629940986633,0,-1.60482013225555],[-0.784629940986633,1,-1.60482013225555],[-0.784629940986633,2,-1.60482013225555]],"colors":[[0,0,0,1]],"texts":[["-2"],["-1"],["0"],["1"],["2"]],"cex":[[1]],"adj":[[0.5,0.5]],"centers":[[-0.784629940986633,-2,-1.60482013225555],[-0.784629940986633,-1,-1.60482013225555],[-0.784629940986633,0,-1.60482013225555],[-0.784629940986633,1,-1.60482013225555],[-0.784629940986633,2,-1.60482013225555]],"family":[["sans"]],"font":[[1]],"ignoreExtent":true,"origId":70,"flags":2064},"85":{"id":85,"type":"lines","material":{"lit":false},"vertices":[[-0.631011366844177,-2.17439198493958,-1],[-0.631011366844177,-2.17439198493958,2],[-0.631011366844177,-2.17439198493958,-1],[-0.682217597961426,-2.28781294822693,-1],[-0.631011366844177,-2.17439198493958,-0.5],[-0.682217597961426,-2.28781294822693,-0.5],[-0.631011366844177,-2.17439198493958,0],[-0.682217597961426,-2.28781294822693,0],[-0.631011366844177,-2.17439198493958,0.5],[-0.682217597961426,-2.28781294822693,0.5],[-0.631011366844177,-2.17439198493958,1],[-0.682217597961426,-2.28781294822693,1],[-0.631011366844177,-2.17439198493958,1.5],[-0.682217597961426,-2.28781294822693,1.5],[-0.631011366844177,-2.17439198493958,2],[-0.682217597961426,-2.28781294822693,2]],"colors":[[0,0,0,1]],"centers":[[-0.631011366844177,-2.17439198493958,0.5],[-0.656614482402802,-2.23110246658325,-1],[-0.656614482402802,-2.23110246658325,-0.5],[-0.656614482402802,-2.23110246658325,0],[-0.656614482402802,-2.23110246658325,0.5],[-0.656614482402802,-2.23110246658325,1],[-0.656614482402802,-2.23110246658325,1.5],[-0.656614482402802,-2.23110246658325,2]],"ignoreExtent":true,"origId":70,"flags":64},"86":{"id":86,"type":"text","material":{"lit":false},"vertices":[[-0.784629940986633,-2.51465511322021,-1],[-0.784629940986633,-2.51465511322021,-0.5],[-0.784629940986633,-2.51465511322021,0],[-0.784629940986633,-2.51465511322021,0.5],[-0.784629940986633,-2.51465511322021,1],[-0.784629940986633,-2.51465511322021,1.5],[-0.784629940986633,-2.51465511322021,2]],"colors":[[0,0,0,1]],"texts":[["-1"],["-0.5"],["0"],["0.5"],["1"],["1.5"],["2"]],"cex":[[1]],"adj":[[0.5,0.5]],"centers":[[-0.784629940986633,-2.51465511322021,-1],[-0.784629940986633,-2.51465511322021,-0.5],[-0.784629940986633,-2.51465511322021,0],[-0.784629940986633,-2.51465511322021,0.5],[-0.784629940986633,-2.51465511322021,1],[-0.784629940986633,-2.51465511322021,1.5],[-0.784629940986633,-2.51465511322021,2]],"family":[["sans"]],"font":[[1]],"ignoreExtent":true,"origId":70,"flags":2064},"87":{"id":87,"type":"lines","material":{"lit":false},"vertices":[[-0.631011366844177,-2.17439198493958,-1.33773481845856],[-0.631011366844177,2.36244988441467,-1.33773481845856],[-0.631011366844177,-2.17439198493958,2.22340226173401],[-0.631011366844177,2.36244988441467,2.22340226173401],[-0.631011366844177,-2.17439198493958,-1.33773481845856],[-0.631011366844177,-2.17439198493958,2.22340226173401],[-0.631011366844177,2.36244988441467,-1.33773481845856],[-0.631011366844177,2.36244988441467,2.22340226173401],[-0.631011366844177,-2.17439198493958,-1.33773481845856],[1.41723656654358,-2.17439198493958,-1.33773481845856],[-0.631011366844177,-2.17439198493958,2.22340226173401],[1.41723656654358,-2.17439198493958,2.22340226173401],[-0.631011366844177,2.36244988441467,-1.33773481845856],[1.41723656654358,2.36244988441467,-1.33773481845856],[-0.631011366844177,2.36244988441467,2.22340226173401],[1.41723656654358,2.36244988441467,2.22340226173401],[1.41723656654358,-2.17439198493958,-1.33773481845856],[1.41723656654358,2.36244988441467,-1.33773481845856],[1.41723656654358,-2.17439198493958,2.22340226173401],[1.41723656654358,2.36244988441467,2.22340226173401],[1.41723656654358,-2.17439198493958,-1.33773481845856],[1.41723656654358,-2.17439198493958,2.22340226173401],[1.41723656654358,2.36244988441467,-1.33773481845856],[1.41723656654358,2.36244988441467,2.22340226173401]],"colors":[[0,0,0,1]],"centers":[[-0.631011366844177,0.0940289497375488,-1.33773481845856],[-0.631011366844177,0.0940289497375488,2.22340226173401],[-0.631011366844177,-2.17439198493958,0.442833721637726],[-0.631011366844177,2.36244988441467,0.442833721637726],[0.393112599849701,-2.17439198493958,-1.33773481845856],[0.393112599849701,-2.17439198493958,2.22340226173401],[0.393112599849701,2.36244988441467,-1.33773481845856],[0.393112599849701,2.36244988441467,2.22340226173401],[1.41723656654358,0.0940289497375488,-1.33773481845856],[1.41723656654358,0.0940289497375488,2.22340226173401],[1.41723656654358,-2.17439198493958,0.442833721637726],[1.41723656654358,2.36244988441467,0.442833721637726]],"ignoreExtent":true,"origId":70,"flags":64},"94":{"id":94,"type":"linestrip","material":{"alpha":0.498039215803146,"lit":false,"depth_test":"always","isTransparent":true},"vertices":[[0,0,-0.999000012874603],[1,0,-0.999000012874603],[1,1,-0.999000012874603],[0,1,-0.999000012874603],[0,0,-0.999000012874603]],"colors":[[0,0,0,0.498039215803146]],"centers":[[0,0,-0.999000012874603],[1,0,-0.999000012874603],[1,1,-0.999000012874603],[0,1,-0.999000012874603],[0,0,-0.999000012874603]],"ignoreExtent":false,"flags":32864}},"crosstalk":{"key":[null],"group":"","id":0,"options":[null]},"width":672,"height":480,"brushId":94,"sphereVerts":{"reuse":"rgl15550"},"context":{"shiny":false,"rmarkdown":null},"players":[],"webGLoptions":{"preserveDrawingBuffer":true}},"evals":[],"jsHooks":[]}</script>
+<p>Source code of this bookdown is here: <a href="https://github.com/mdsumner/rgl-bookdown#why-does-the-rgl-widget-not-appear-in-chapter-3" class="uri">https://github.com/mdsumner/rgl-bookdown#why-does-the-rgl-widget-not-appear-in-chapter-3</a></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="rgl-and-bookdown-eek.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-rando.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
