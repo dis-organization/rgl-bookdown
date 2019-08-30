@@ -1,0 +1,10 @@
+# Rando
+
+Why does this rgl widget not appear? 
+
+
+```{r rando-chapter}
+rgl::clear3d()
+rgl::plot3d(matrix(rnorm(27), 9, 3))
+rglwidget()
+```

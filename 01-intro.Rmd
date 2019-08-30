@@ -1,0 +1,56 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+# rgl and bookdown eek
+
+
+One chunk, two widgets. 
+
+```{r rgl-line, echo=TRUE, eval=TRUE}
+colpal <- function(n = 26, drop = 5) sf::sf.colors(n)[-seq_len(drop)]
+
+library(rgl)
+clear3d()
+#p3 <- mfrow3d(1, 2, sharedMouse = TRUE)
+(geometry <- cbind(x = c(0, 0.5, 1), y = c(0, 0.5, 1), z = c(0, 0, 0.8)))
+(topology1 <- rbind(.v0 = c(1, 2), .v1 = c(2, 3)))
+lines3d(geometry[t(topology1), ], lwd = 3, col = "firebrick")
+material3d(col = "black")
+axis3d("x")
+axis3d("y")
+axis3d("z")
+title3d(xlab = "x", ylab = "y", zlab = "z")
+quads3d(cbind(c(0, 1, 1, 0), c(0, 0, 1, 1), c(0, 0, 0, 0) - 0.01), col="gray")
+rglwidget()
+#next3d()
+clear3d()
+(topology2 <- rbind(.v0 = c(1, 2, 1), .v1 = c(2, 3, 1)))
+triangles3d(geometry[t(topology2), ], col = "firebrick")
+material3d(col = "black")
+axis3d("x")
+axis3d("y")
+axis3d("z")
+title3d(xlab = "x", ylab = "y", zlab = "z")
+quads3d(cbind(c(0, 1, 1, 0), c(0, 0, 1, 1), c(0, 0, 0, 0)), col="gray")
+
+rglwidget()
+```
+
+
+
+## Quads
+
+
+Quads are a funny case, usually carried by two triangles (at least implicitly) but they are an important computer graphics element. 
+
+
+## Rando
+
+```{r rando}
+rgl::clear3d()
+rgl::plot3d(matrix(rnorm(27), 9, 3))
+rglwidget()
+```
+
